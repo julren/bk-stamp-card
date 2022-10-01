@@ -20,7 +20,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "https://julren.github.io/bk-stamp-card/",
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
