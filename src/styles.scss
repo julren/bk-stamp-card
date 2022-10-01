@@ -9,6 +9,7 @@ body {
   background-color: var(--bg);
   font-family: "Flame";
   color: var(--brown);
+  user-select: none;
 }
 
 h1 {

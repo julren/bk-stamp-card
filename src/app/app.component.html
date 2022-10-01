@@ -8,7 +8,11 @@
     <div class="slots">
       <div *ngFor="let slot of slots; let index = index">
         <div class="slot" id="slot-{{ index }}" (click)="toggleSlot(index)">
-          <img class="stamp" src="assets/bk-logo.svg" *ngIf="slots[index]" />
+          <img
+            class="stamp"
+            src="assets/bk-logo.svg"
+            [hidden]="!slots[index]"
+          />
         </div>
         <div class="date">{{ dates[index] }}</div>
       </div>
