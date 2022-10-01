@@ -1,14 +1,14 @@
 <div class="wrapper">
   <div class="content" [ngClass]="{ blur: successAchieved }">
     <div class="header">
-      <img class="logo" src="/assets/bk-logo.svg" />
+      <img class="logo" src="assets/bk-logo.svg" />
       <h1>Stempelkarte</h1>
     </div>
     <p class="tagline">King ist, wer zum Pumpen geht!</p>
     <div class="slots">
       <div *ngFor="let slot of slots; let index = index">
         <div class="slot" id="slot-{{ index }}" (click)="toggleSlot(index)">
-          <img class="stamp" src="/assets/bk-logo.svg" *ngIf="slots[index]" />
+          <img class="stamp" src="assets/bk-logo.svg" *ngIf="slots[index]" />
         </div>
         <div class="date">{{ dates[index] }}</div>
       </div>
