@@ -1,5 +1,5 @@
 import { DatastoreService } from './datastore.service';
-import { Component } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 import confetti from 'canvas-confetti';
 @Component({
   selector: 'app-root',
@@ -18,6 +18,13 @@ export class AppComponent {
 
   get dates() {
     return this.dataStore.dates;
+  }
+
+  // call this event handler before browser refresh
+  @HostListener('window:beforeunload', ['$event']) unloadHandler(event: Event) {
+    if (this.successAchieved) {
+      this.dataStore.reset();
+    }
   }
 
   toggleSlot(index: number) {
