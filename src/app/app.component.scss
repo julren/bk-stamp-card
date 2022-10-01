@@ -1,5 +1,7 @@
 .wrapper {
   height: 100%;
+  max-width: 720px;
+  margin: auto;
   box-sizing: border-box;
 
   position: relative;
@@ -60,11 +62,18 @@ h1 {
   display: none;
 }
 
+.blur {
+  filter: blur(6px);
+}
+
 .success-wrapper {
   overflow: hidden;
 }
 .success {
-  color: var(--red);
+  filter: blur(0px);
+  -webkit-text-stroke: 1px var(--brown);
+
+  color: var(--yellow);
   z-index: 9999;
   width: 100%;
   box-sizing: border-box;
