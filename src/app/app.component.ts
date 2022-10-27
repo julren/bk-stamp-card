@@ -1,5 +1,5 @@
 import { DatastoreService } from './datastore.service';
-import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import confetti from 'canvas-confetti';
 @Component({
   selector: 'app-root',
